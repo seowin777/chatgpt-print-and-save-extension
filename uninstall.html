@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ChatGPT Print and Save was removed</title>
+<script async src="https://www.googletagmanager.com/gtag/js?id={{GA_ID}}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{GA_ID}}');
+  gtag('event', 'uninstall', {extension: 'chatgpt-print-and-save-extension'});
+  function why(reason) {
+    gtag('event', 'uninstall_reason', {extension: 'chatgpt-print-and-save-extension', reason: reason});
+    document.querySelector('main').innerHTML = '<svg class="ok" viewBox="0 0 24 24" width="48" height="48"><path d="M20 6 9 17l-5-5"/></svg><h1>Thank you</h1>';
+  }
+</script>
+<style>
+  :root { --bg:#FFFFFF; --text:#1A1B1E; --border:#E4E5E8; --accent:#4F46E5; --ok:#16A34A; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#1F2023; --text:#ECECEF; --border:#34363B; --accent:#818CF8; --ok:#4ADE80; } }
+  body { margin:0; font:16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; background:var(--bg); color:var(--text); }
+  main { max-width:560px; margin:0 auto; padding:48px 16px; text-align:center; }
+  h1 { font-size:24px; font-weight:700; margin:0 0 24px; }
+  button { display:block; width:100%; height:48px; margin:8px 0; font:inherit; cursor:pointer; background:none; color:inherit;
+           border:1px solid var(--border); border-radius:8px; transition:background-color .15s, transform .15s; }
+  button:hover { background:rgba(127,127,127,.14); }
+  button:active { transform:translateY(1px); }
+  button:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+  .ok { fill:none; stroke:var(--ok); stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Why did you remove it?</h1>
+  <button onclick="why('stopped_working')">It stopped working</button>
+  <button onclick="why('incomplete')">The file was not complete</button>
+  <button onclick="why('too_slow')">It was too slow</button>
+  <button onclick="why('not_needed')">I did not need it any more</button>
+  <button onclick="why('other')">Other</button>
+</main>
+</body>
+</html>

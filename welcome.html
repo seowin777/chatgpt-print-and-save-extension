@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ChatGPT Print and Save is installed</title>
+<script async src="https://www.googletagmanager.com/gtag/js?id={{GA_ID}}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{GA_ID}}');
+  gtag('event', 'install', {extension: 'chatgpt-print-and-save-extension', source: new URLSearchParams(location.search).get('v') || ''});
+</script>
+<style>
+  :root {
+    --bg: #fff; --fg: #111111; --muted: #6b7280;
+    --accent: #4F46E5; --accent-10: rgba(79, 70, 229, .1);
+    --shadow: 0 2px 8px rgba(0, 0, 0, .08); --line: #e5e7eb; --sunk: #f3f4f6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1c1c1e; --fg: #f2f2f2; --muted: #9ca3af;
+      --accent: #818CF8; --accent-10: rgba(129, 140, 248, .18);
+      --shadow: 0 2px 8px rgba(0, 0, 0, .4); --line: #3a3a3c; --sunk: #2c2c2e;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 16px/1.5 system-ui, sans-serif; background: var(--bg); color: var(--fg); }
+  svg { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  main { max-width: 760px; margin: 0 auto; padding: 48px 16px; text-align: center; }
+  .app-icon { width: 48px; height: 48px; color: var(--accent); }
+  h1 { font-size: 28px; margin: 16px 0 8px; }
+  p.lead { color: var(--muted); margin: 0 0 32px; }
+  .steps { list-style: none; padding: 0; margin: 0; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .steps li {
+    flex: 1 1 200px; max-width: 220px; text-align: left; padding: 16px;
+    border-radius: 12px; box-shadow: var(--shadow); background: var(--bg);
+  }
+  .step-top { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .num {
+    display: inline-grid; place-items: center; width: 32px; height: 32px; flex: none;
+    border-radius: 50%; background: var(--accent); color: #fff; font-weight: 700;
+  }
+  .step-top svg { width: 24px; height: 24px; color: var(--accent); }
+  .steps p { margin: 0; color: var(--fg); }
+  img { max-width: 100%; margin-top: 32px; border-radius: 12px; box-shadow: var(--shadow); }
+  .shot { margin: 40px auto 0; max-width: 640px; }
+  .shot svg { width: 100%; height: auto; display: block; stroke-width: 0; }
+  .shot .win { fill: var(--bg); stroke: var(--line); stroke-width: 1; }
+  .shot .bar { fill: var(--sunk); }
+  .shot .dot { fill: var(--line); }
+  .shot .url, .shot .ghost { fill: var(--bg); }
+  .shot .urltext, .shot .menutitle { fill: var(--muted); font: 14px system-ui, sans-serif; }
+  .shot .menutitle { font-weight: 600; fill: var(--fg); }
+  .shot .menu { fill: var(--bg); stroke: var(--line); stroke-width: 1; filter: drop-shadow(0 8px 16px rgba(0,0,0,.15)); }
+  .shot .row { fill: var(--accent-10); }
+  .shot .rowtext { fill: var(--fg); font: 600 14px system-ui, sans-serif; }
+  .shot .ico { fill: none; stroke: var(--fg); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .shot .ring { fill: none; stroke: var(--accent); stroke-width: 3; transform-box: fill-box; transform-origin: center; animation: pulse 1.5s ease-in-out infinite; }
+  @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.12); opacity: .6; } }
+  @media (prefers-reduced-motion: reduce) { .shot .ring { animation: none; } }
+  .shot .badge { fill: var(--accent); }
+  .shot .badgetext { fill: #fff; font: 700 13px system-ui, sans-serif; text-anchor: middle; }
+  .shot .appdot { fill: url(#rdg); }
+  .shot .appico { fill: none; stroke: #fff; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  .cta {
+    display: inline-flex; align-items: center; gap: 8px; margin-top: 32px; padding: 0 32px; font-size: 18px;
+    border-radius: 999px; color: #fff; font-weight: 600; text-decoration: none;
+    background: linear-gradient(135deg, #4F46E5, #9333EA);
+    box-shadow: 0 4px 14px rgba(79, 70, 229, .4); transition: transform 150ms; min-height: 56px;
+  }
+  .cta:hover { transform: translateY(-1px); }
+  .cta svg { width: 18px; height: 18px; }
+  .mine { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 24px; color: var(--muted); }
+  .btn36 { display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; color: #fff; background: linear-gradient(135deg, #4F46E5, #9333EA); box-shadow: 0 2px 8px rgba(79, 70, 229, .35); }
+  .btn36 svg { stroke: #fff; }
+</style>
+</head>
+<body>
+<main>
+  <svg class="app-icon" viewBox="0 0 24 24"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"/><rect x="6" y="14" width="12" height="8" rx="1"/></svg>
+  <h1>ChatGPT Print and Save is installed</h1>
+  <p class="lead">Chrome hides new extensions. Pin it once — it stays next to the address bar.</p>
+  <ol class="steps">
+    <li>
+      <div class="step-top"><span class="num">1</span>
+        <svg viewBox="0 0 24 24"><path d="M15.39 4.39a1 1 0 0 0 1.68-.474 2.5 2.5 0 1 1 3.014 3.015 1 1 0 0 0-.474 1.68l1.683 1.682a2.414 2.414 0 0 1 0 3.414L19.61 15.39a1 1 0 0 1-1.68-.474 2.5 2.5 0 1 0-3.014 3.015 1 1 0 0 1 .474 1.68l-1.683 1.682a2.414 2.414 0 0 1-3.414 0L8.61 19.61a1 1 0 0 0-1.68.474 2.5 2.5 0 1 1-3.014-3.015 1 1 0 0 0 .474-1.68l-1.683-1.682a2.414 2.414 0 0 1 0-3.414L4.39 8.61a1 1 0 0 1 1.68.474 2.5 2.5 0 1 0 3.014-3.015 1 1 0 0 1-.474-1.68l1.683-1.682a2.414 2.414 0 0 1 3.414 0z"/></svg>
+      </div>
+      <p>Click the puzzle icon in the top-right corner of Chrome</p>
+    </li>
+    <li>
+      <div class="step-top"><span class="num">2</span>
+        <svg viewBox="0 0 24 24"><path d="M12 17v5"/><path d="M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1z"/></svg>
+      </div>
+      <p>Click the pin next to ChatGPT Print and Save</p>
+    </li>
+    <li>
+      <div class="step-top"><span class="num">3</span>
+        <svg viewBox="0 0 24 24"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"/><rect x="6" y="14" width="12" height="8" rx="1"/></svg>
+      </div>
+      <p>Open a ChatGPT chat and click the print button</p>
+    </li>
+  </ol>
+  <figure class="shot" aria-label="Where to find ChatGPT Print and Save: puzzle icon in the top-right corner of Chrome, then the pin button">
+    <svg viewBox="0 0 640 250" role="img">
+      <rect class="win" x="1" y="1" width="638" height="248" rx="14"/>
+      <rect class="bar" x="1" y="1" width="638" height="56" rx="14"/>
+      <rect class="bar" x="1" y="30" width="638" height="27"/>
+      <circle class="dot" cx="24" cy="29" r="6"/><circle class="dot" cx="44" cy="29" r="6"/><circle class="dot" cx="64" cy="29" r="6"/>
+      <rect class="url" x="90" y="15" width="430" height="28" rx="14"/>
+      <text class="urltext" x="108" y="34">chatgpt.com</text>
+      <circle class="ring" cx="562" cy="29" r="19"/>
+      <g transform="translate(550 17)"><path class="ico" d="M15.39 4.39a1 1 0 0 0 1.68-.474 2.5 2.5 0 1 1 3.014 3.015 1 1 0 0 0-.474 1.68l1.683 1.682a2.414 2.414 0 0 1 0 3.414L19.61 15.39a1 1 0 0 1-1.68-.474 2.5 2.5 0 1 0-3.014 3.015 1 1 0 0 1 .474 1.68l-1.683 1.682a2.414 2.414 0 0 1-3.414 0L8.61 19.61a1 1 0 0 0-1.68.474 2.5 2.5 0 1 1-3.014-3.015 1 1 0 0 0 .474-1.68l-1.683-1.682a2.414 2.414 0 0 1 0-3.414L4.39 8.61a1 1 0 0 1 1.68.474 2.5 2.5 0 1 0 3.014-3.015 1 1 0 0 1-.474-1.68l1.683-1.682a2.414 2.414 0 0 1 3.414 0z"/></g>
+      <circle class="badge" cx="582" cy="12" r="11"/><text class="badgetext" x="582" y="16.5">1</text>
+      <circle class="dot" cx="608" cy="29" r="10"/>
+      <rect class="menu" x="330" y="70" width="290" height="160" rx="12"/>
+      <text class="menutitle" x="350" y="100">Extensions</text>
+      <rect class="row" x="342" y="116" width="266" height="44" rx="8"/>
+      <circle class="appdot" cx="368" cy="138" r="12"/>
+      <g transform="translate(360 130) scale(.66)" class="appico"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"/><rect x="6" y="14" width="12" height="8" rx="1"/></g>
+      <text class="rowtext" x="390" y="143">ChatGPT Print and Save</text>
+      <circle class="ring" cx="582" cy="138" r="17"/>
+      <g transform="translate(572 128) scale(.84)" class="ico"><path d="M12 17v5"/><path d="M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1z"/></g>
+      <circle class="badge" cx="600" cy="120" r="11"/><text class="badgetext" x="600" y="124.5">2</text>
+      <rect class="ghost" x="342" y="170" width="266" height="44" rx="8"/>
+    </svg>
+  </figure>
+  <a class="cta" href="https://chatgpt.com/"><svg viewBox="0 0 24 24"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"/><rect x="6" y="14" width="12" height="8" rx="1"/></svg>Open ChatGPT</a>
+  <svg width="0" height="0" style="position:absolute"><defs><linearGradient id="rdg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#9333EA"/></linearGradient></defs></svg>
+  <div class="mine"><span class="btn36"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"/><rect x="6" y="14" width="12" height="8" rx="1"/></svg></span><span>This button</span></div>
+</main>
+</body>
+</html>
