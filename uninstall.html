@@ -12,7 +12,7 @@
   gtag('config', '{{GA_ID}}');
   gtag('event', 'uninstall', {extension: 'chatgpt-print-and-save-extension'});
   function why(reason) {
-    gtag('event', 'uninstall_reason', {extension: 'chatgpt-print-and-save-extension', reason: reason});
+    gtag('event', 'uninstall_' + reason, {extension: 'chatgpt-print-and-save-extension'}); // one event per reason: shows up in GA Events as is
     document.querySelector('main').innerHTML = '<svg class="ok" viewBox="0 0 24 24" width="48" height="48"><path d="M20 6 9 17l-5-5"/></svg><h1>Thank you</h1>';
   }
 </script>
